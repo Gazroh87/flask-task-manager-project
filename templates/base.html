@@ -25,7 +25,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
                     <li><a href="#">Logout</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
@@ -48,7 +48,7 @@
             <li><a href="#">Profile</a></li>
             <li><a href="#">New Task</a></li>
             <li><a href="#">Categories</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
             <li><a href="#">Logout</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
