@@ -23,3 +23,13 @@
     margin: 5px;
     line-height: 42px;    
 }
+
+.tabs-transparent {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs .tab a {
+    font-size: 18px;
+}
