@@ -38,7 +38,9 @@
                     {% if session.user%}
                         <li class="tab"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li class="tab"><a href="{{ url_for('add_task') }}">New Task</a></li>
-                        <li class="tab"><a href="categories">Categories</a></li>
+                        {% if session.user|lower == "admin1"|lower %}
+                            <li class="tab"><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                        {% endif %}
                     {% else %}
                     {% endif %}
                 </ul>
@@ -54,7 +56,9 @@
             {% if session.user%}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_task') }}">New Task</a></li>
-                <li><a href="#">Categories</a></li>
+                {% if session.user|lower == "admin1"|lower %}
+                    <li class="tab"><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                {% endif %}
                 <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Login</a></li>
